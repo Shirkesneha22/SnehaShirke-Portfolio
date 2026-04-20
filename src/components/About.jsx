@@ -4,12 +4,12 @@ import '../styles/about.css';
 
 const About = () => {
   const highlights = [
-    'Full Stack Development',
-    'React.js & React Native',
-    'AI-Powered Applications',
-    'Backend APIs & Databases',
-    'NLP & Semantic Search',
-    'RAG-based Systems',
+    'Frontend Development',
+    'React.js & Next.js',
+    'AI / Machine Learning',
+    'Python & NLP',
+    'Cloud & Deployment',
+    'REST APIs',
   ];
 
   const containerVariants = {
@@ -43,22 +43,22 @@ const About = () => {
             <h2 className="section-title">About Me</h2>
             
             <p>
-              I'm a <strong>Full Stack Developer</strong> focused on building complete, 
-              production-ready applications. With a strong foundation in <strong>React.js</strong> and 
-              hands-on experience in backend APIs, databases, and <strong>React Native</strong> for 
-              mobile development, I work across the entire stack to deliver real-world products.
+              I'm a passionate <strong>Aspiring Full Stack Developer</strong> and a <strong>Fresher</strong> dedicated to 
+              building modern, efficient, and user-centric web applications. With a solid foundation in 
+              <strong> Frontend Development</strong> and a growing expertise in <strong>AI-powered solutions</strong>, 
+              I enjoy turning complex problems into simple, functional code.
             </p>
             
             <p>
-              I specialize in building <strong>AI-powered applications</strong> — from resume analyzers 
-              and job matching systems to document intelligence platforms. I have practical experience 
-              with <strong>NLP, semantic search, RAG-based systems, and AI agents</strong>, applying 
-              these concepts to solve real problems, not just as buzzwords.
+              I specialize in building applications that integrate <strong>AI and Machine Learning</strong> — 
+              from document intelligence platforms to automated systems. I am particularly interested in 
+              leveraging technologies like <strong>React, Python, and Cloud services</strong> to create 
+              impactful digital experiences that solve real-world challenges.
             </p>
 
             <div className="about-highlight-line">
               <span className="highlight-icon">⚡</span>
-              <span>I leverage modern AI tools to rapidly prototype and ship features — building products at the speed of ideas.</span>
+              <span>I leverage modern tools and AI to rapidly build and ship features — focusing on quality and scalability.</span>
             </div>
 
             <div className="about-highlight">
