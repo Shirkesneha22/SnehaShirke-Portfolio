@@ -2,6 +2,7 @@
   background: var(--color-bg-primary);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: var(--spacing-xl) 0;
 }
@@ -24,11 +25,158 @@
   margin-top: 0.5rem;
 }
 
+/* Orbit System Container */
+.orbit-system-wrapper {
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.orbit-system {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Central Core */
+.orbit-core {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 
+    0 0 40px rgba(124, 58, 237, 0.4),
+    0 0 80px rgba(124, 58, 237, 0.2);
+}
+
+.orbit-core-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Orbit Rings */
+.orbit-ring {
+  position: absolute;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  animation: orbit-rotate linear infinite;
+}
+
+.orbit-ring:hover {
+  animation-play-state: paused;
+}
+
+.orbit-ring-1 {
+  width: 220px;
+  height: 220px;
+  animation-duration: 25s;
+}
+
+.orbit-ring-2 {
+  width: 380px;
+  height: 380px;
+  animation-duration: 40s;
+  animation-direction: reverse;
+}
+
+.orbit-ring-3 {
+  width: 540px;
+  height: 540px;
+  animation-duration: 60s;
+}
+
+@keyframes orbit-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Skill Items */
+.orbit-skill {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.orbit-skill:hover {
+  transform: scale(1.2);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+}
+
+.orbit-skill-icon {
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  animation: counter-rotate linear infinite;
+}
+
+.orbit-ring-1 .orbit-skill-icon { animation-duration: 25s; }
+.orbit-ring-2 .orbit-skill-icon { animation-duration: 40s; animation-direction: reverse; }
+.orbit-ring-3 .orbit-skill-icon { animation-duration: 60s; }
+
+.orbit-ring:hover .orbit-skill-icon {
+  animation-play-state: paused;
+}
+
+@keyframes counter-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* Position skills on orbits (up to 6 items per ring) */
+.orbit-ring .orbit-skill:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.orbit-ring .orbit-skill:nth-child(2) { top: 50%; right: 0; transform: translate(50%, -50%); }
+.orbit-ring .orbit-skill:nth-child(3) { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+.orbit-ring .orbit-skill:nth-child(4) { top: 50%; left: 0; transform: translate(-50%, -50%); }
+.orbit-ring .orbit-skill:nth-child(5) { top: 15%; right: 15%; transform: translate(50%, -50%); }
+.orbit-ring .orbit-skill:nth-child(6) { bottom: 15%; left: 15%; transform: translate(-50%, 50%); }
+
+/* Skill Labels in Orbit */
+.orbit-skill-label {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.orbit-skill:hover .orbit-skill-label {
+  opacity: 1;
+}
+
+/* Categories Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
+  margin-top: 4rem;
 }
 
 .skill-category-card {
@@ -113,21 +261,34 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .orbit-system {
+    max-width: 400px;
+    height: 400px;
   }
   
-  .skills-container {
-    padding: 0 var(--spacing-md);
+  .orbit-ring-1 { width: 140px; height: 140px; }
+  .orbit-ring-2 { width: 260px; height: 260px; }
+  .orbit-ring-3 { width: 380px; height: 380px; }
+  
+  .orbit-skill { width: 45px; height: 45px; }
+  .orbit-skill-icon { font-size: 1.3rem; }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .skill-category-card {
-    padding: var(--spacing-md);
+  .orbit-system {
+    max-width: 300px;
+    height: 300px;
   }
   
-  .category-title {
-    font-size: 1.1rem;
-  }
+  .orbit-ring-1 { width: 100px; height: 100px; }
+  .orbit-ring-2 { width: 200px; height: 200px; }
+  .orbit-ring-3 { width: 280px; height: 280px; }
+  
+  .orbit-skill { width: 35px; height: 35px; }
+  .orbit-skill-icon { font-size: 1rem; }
 }
