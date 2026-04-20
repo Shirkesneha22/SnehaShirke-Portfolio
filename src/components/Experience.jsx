@@ -8,7 +8,7 @@ const Experience = () => {
       role: 'Full Stack Developer',
       company: 'Vedant Info Edge Pvt. Ltd.',
       location: 'India',
-      date: 'September 2025 – Present',
+      date: 'Nov 2025 –  March 2026',
       isCurrent: true,
       description: [
         'Developing full stack web applications from scratch',
@@ -24,7 +24,7 @@ const Experience = () => {
       role: 'Web Developer',
       company: 'BDIGITAU',
       location: 'Pune',
-      date: 'July 2025 – September 2025',
+      date: 'Oct 2025 – Nov 2025',
       isCurrent: false,
       description: [
         'Built and maintained web pages using modern frontend technologies',
