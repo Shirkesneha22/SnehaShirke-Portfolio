@@ -7,9 +7,7 @@ import {
   FaJsSquare, 
   FaNodeJs, 
   FaPython, 
-  FaDatabase, 
   FaAws, 
-  FaGitAlt, 
   FaGithub, 
   FaCode, 
   FaFigma,
@@ -17,8 +15,7 @@ import {
   FaCloud,
   FaRobot,
   FaBrain,
-  FaProjectDiagram,
-  FaTerminal
+  FaProjectDiagram
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
