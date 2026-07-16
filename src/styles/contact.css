@@ -126,6 +126,10 @@
   transition: all var(--transition-normal);
 }
 
+.contact-cta .form-submit {
+  margin-top: var(--spacing-md);
+}
+
 .form-submit:hover {
   background: var(--color-accent-light);
   transform: translateY(-2px);
