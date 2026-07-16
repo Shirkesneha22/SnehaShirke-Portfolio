@@ -70,6 +70,25 @@
   padding: var(--spacing-xl);
 }
 
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.contact-cta h3 {
+  color: var(--color-text-heading);
+  font-size: 1.35rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-cta p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
 .form-group {
   margin-bottom: var(--spacing-md);
 }
@@ -127,7 +146,8 @@
 }
 
 .contact-cta .form-submit {
-  margin-top: var(--spacing-md);
+  margin-top: 1.75rem;
+  align-self: flex-start;
 }
 
 .form-submit:hover {
