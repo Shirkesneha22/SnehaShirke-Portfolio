@@ -1,10 +1,6 @@
 .skills {
   background: var(--color-bg-primary);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-2xl) 0;
 }
 
 .skills-container {
@@ -26,12 +22,6 @@
 }
 
 /* Orbit System Container */
-.orbit-system-wrapper {
-  margin-bottom: 6rem;
-  display: flex;
-  justify-content: center;
-  perspective: 1000px;
-}
 
 .orbit-system {
   position: relative;
@@ -174,9 +164,9 @@
 /* Categories Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: var(--spacing-lg);
-  margin-top: 4rem;
+  margin-top: 0;
 }
 
 .skill-category-card {

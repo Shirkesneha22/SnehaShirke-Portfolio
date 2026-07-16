@@ -86,6 +86,9 @@
   background: rgba(124, 58, 237, 0.1);
 }
 
+.theme-toggle { background: transparent; color: var(--color-text-secondary); border: 1px solid var(--color-border); width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; transition: all var(--transition-fast); }
+.theme-toggle:hover { color: var(--color-accent-light); border-color: var(--color-accent); }
+
 /* Mobile Menu Toggle */
 .navbar-toggle {
   display: none;

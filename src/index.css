@@ -43,6 +43,19 @@
   --max-width: 1200px;
 }
 
+:root[data-theme='light'] {
+  --color-bg-primary: #f8fafc;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #e9edf5;
+  --color-accent: #6d28d9;
+  --color-accent-light: #7c3aed;
+  --color-text-primary: #26334d;
+  --color-text-secondary: #5b6680;
+  --color-text-heading: #172033;
+  --color-border: #dce3ee;
+  --color-card-bg: rgba(255,255,255,.9);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -100,6 +113,8 @@ button {
 .section {
   padding: var(--spacing-2xl) 0;
 }
+
+.section-intro { color: var(--color-text-secondary); margin: -1.5rem 0 2rem; max-width: 650px; }
 
 .section-title {
   font-size: 2rem;
