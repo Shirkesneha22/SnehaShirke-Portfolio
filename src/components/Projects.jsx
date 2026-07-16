@@ -56,6 +56,58 @@ const Projects = () => {
       liveLink: '#',
       githubLink: '#',
       icon: '📑'
+    },
+    {
+      title: 'AI Analytics Dashboard (Decision-Making AI)',
+      goal: 'An AI-powered dashboard for analyzing and visualizing business data.',
+      features: [
+        'Supports CSV data upload',
+        'Generates charts and visual reports',
+        'Provides AI-based insights and trend predictions',
+        'Helps in data-driven decision making',
+        'Combines analytics with intelligent forecasting'
+      ],
+      aiCapabilities: [
+        'Trend forecasting models',
+        'Automated insight generation',
+        'Data pattern recognition'
+      ],
+      techStack: {
+        frontend: ['React', 'Chart.js', 'D3.js'],
+        backend: ['Python', 'FastAPI'],
+        ai: ['Prophet', 'Scikit-learn'],
+        database: ['PostgreSQL']
+      },
+      impactStatement: 'Makes complex data easy to understand and actionable.',
+      liveLink: '#',
+      githubLink: '#',
+      icon: '📊'
+    },
+    {
+      title: 'AI Job Searching Platform',
+      goal: 'A full-stack platform designed to simplify job searching using intelligent matching.',
+      features: [
+        'Users can browse and search job listings',
+        'Upload resumes for analysis',
+        'AI suggests relevant job roles based on profile',
+        'Personalized job recommendations',
+        'Can integrate with resume analyzer for better matching'
+      ],
+      aiCapabilities: [
+        'Job-profile matching algorithms',
+        'Natural Language Processing for job descriptions',
+        'Personalized recommendation engine'
+      ],
+      techStack: {
+        frontend: ['React', 'Tailwind CSS', 'Framer Motion'],
+        backend: ['Node.js', 'Express'],
+        ai: ['OpenAI', 'LlamaIndex'],
+        database: ['MongoDB', 'Pinecone']
+      },
+      impactStatement: 'Enhances job search efficiency with personalized AI recommendations.',
+      liveLink: '#',
+      githubLink: '#',
+      icon: '💼'
     }
   ];
 

@@ -35,6 +35,33 @@ import {
 import '../styles/skills.css';
 
 const Skills = () => {
+  // Orbit Ring 1 - Frontend Core
+  const ring1Skills = [
+    { icon: <FaReact />, label: 'React' },
+    { icon: <SiNextdotjs />, label: 'Next.js' },
+    { icon: <FaJsSquare />, label: 'JavaScript' },
+    { icon: <FaHtml5 />, label: 'HTML5' },
+  ];
+
+  // Orbit Ring 2 - Backend & AI
+  const ring2Skills = [
+    { icon: <FaNodeJs />, label: 'Node.js' },
+    { icon: <SiFastapi />, label: 'FastAPI' },
+    { icon: <FaPython />, label: 'Python' },
+    { icon: <SiPostgresql />, label: 'PostgreSQL' },
+    { icon: <SiMongodb />, label: 'MongoDB' },
+  ];
+
+  // Orbit Ring 3 - Tools & Cloud
+  const ring3Skills = [
+    { icon: <FaAws />, label: 'AWS' },
+    { icon: <FaGithub />, label: 'GitHub' },
+    { icon: <SiOpenai />, label: 'OpenAI' },
+    { icon: <FaFigma />, label: 'Figma' },
+    { icon: <SiPostman />, label: 'Postman' },
+    { icon: <SiFramer />, label: 'Framer' },
+  ];
+
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -120,6 +147,14 @@ const Skills = () => {
     }
   };
 
+  const renderOrbitSkills = (skills) =>
+    skills.map((skill, index) => (
+      <div key={index} className="orbit-skill" title={skill.label}>
+        <span className="orbit-skill-icon">{skill.icon}</span>
+        <span className="orbit-skill-label">{skill.label}</span>
+      </div>
+    ));
+
   return (
     <section id="skills" className="section skills">
       <div className="skills-container">
@@ -131,9 +166,37 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="section-title">Skills & Expertise</h2>
-          <p className="section-subtitle">A blend of core development and specialized AI expertise</p>
+          <p className="section-subtitle">Visualizing my tech stack from core to specialized tools</p>
         </motion.div>
 
+        {/* Orbit System - Visual Representation */}
+        <motion.div
+          className="orbit-system-wrapper"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="orbit-system">
+            <div className="orbit-core">
+              <span className="orbit-core-text">Tech<br />Stack</span>
+            </div>
+
+            <div className="orbit-ring orbit-ring-1">
+              {renderOrbitSkills(ring1Skills)}
+            </div>
+
+            <div className="orbit-ring orbit-ring-2">
+              {renderOrbitSkills(ring2Skills)}
+            </div>
+
+            <div className="orbit-ring orbit-ring-3">
+              {renderOrbitSkills(ring3Skills)}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Categories Grid - Detailed Information */}
         <motion.div
           className="skills-grid"
           variants={containerVariants}
