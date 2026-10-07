@@ -1,52 +1,16 @@
-import { siteConfig } from "@/content/site";
 import { experiences } from "@/content/experience";
 import { projects } from "@/content/projects";
 import { skills } from "@/content/skills";
-import { Mail, ExternalLink } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/components/Icons";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
 
 export default function Home() {
   return (
-    <div className="space-y-24">
-      {/* Hero Section */}
-      <section className="space-y-6">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
-          {siteConfig.name}
-        </h1>
-        <p className="text-xl text-slate-600 max-w-2xl font-medium">
-          {siteConfig.headline}
-        </p>
-        <p className="text-slate-600 max-w-2xl leading-relaxed">
-          {siteConfig.about}
-        </p>
-        <div className="flex items-center gap-4 pt-4">
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="text-slate-500 hover:text-blue-600 transition-colors"
-            aria-label="Email"
-          >
-            <Mail className="w-6 h-6" />
-          </a>
-          <a
-            href={siteConfig.socials.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-500 hover:text-slate-900 transition-colors"
-            aria-label="GitHub"
-          >
-            <GithubIcon className="w-6 h-6" />
-          </a>
-          <a
-            href={siteConfig.socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-500 hover:text-blue-700 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <LinkedinIcon className="w-6 h-6" />
-          </a>
-        </div>
-      </section>
+    <div className="space-y-16">
+      <Hero />
+      <About />
 
       {/* Experience Section */}
       <section className="space-y-8">
