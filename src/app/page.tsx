@@ -1,10 +1,8 @@
 import { experiences } from "@/content/experience";
-import { projects } from "@/content/projects";
 import { skills } from "@/content/skills";
-import { ExternalLink } from "lucide-react";
-import { GithubIcon } from "@/components/Icons";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Projects } from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -42,60 +40,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="space-y-8">
-        <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group border border-slate-200 rounded-2xl p-6 hover:border-slate-300 transition-all hover:shadow-sm flex flex-col h-full bg-white"
-            >
-              <div className="flex justify-between items-start gap-4 mb-4">
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {project.title}
-                </h3>
-                <div className="flex gap-3 text-slate-400">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-slate-900 transition-colors"
-                      aria-label={`${project.title} GitHub repo`}
-                    >
-                      <GithubIcon className="w-5 h-5" />
-                    </a>
-                  )}
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-600 transition-colors"
-                      aria-label={`${project.title} live site`}
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  )}
-                </div>
-              </div>
-              <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Projects />
 
       {/* Skills Section */}
       <section className="space-y-8">

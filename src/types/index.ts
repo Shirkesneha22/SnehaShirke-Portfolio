@@ -12,12 +12,22 @@ export interface SiteConfig {
 export interface Project {
   title: string;
   slug: string;
+  summary: string;
   description: string;
-  content?: string;
+  problem?: string;
+  role?: string;
+  features?: string[];
   technologies: string[];
+  architectureNotes?: string;
+  keyDecisions?: string[];
+  challenges?: string[];
+  results?: string[];
   link?: string;
   github?: string;
   image?: string;
+  screenshots?: string[];
+  featured: boolean;
+  status: "shipped" | "in-progress";
 }
 
 export interface Experience {
