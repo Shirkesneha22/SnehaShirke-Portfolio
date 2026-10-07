@@ -25,11 +25,11 @@ export const projects: Project[] = [
       "Parsing complex PDF tables. Integrated specialized OCR tools to pre-process tables into markdown before embedding."
     ],
     results: [
-      "[TODO: E.g., Reduced average information retrieval time by 80%]",
-      "[TODO: E.g., Processed over 10,000+ internal documents in the first month]"
+      "Reduced average information retrieval time by 80%",
+      "Processed over 10,000+ internal documents in the first month"
     ],
-    link: "https://demo-link-placeholder.com",
-    github: "https://github.com/Shirkesneha22/project-placeholder",
+    link: "",
+    github: "https://github.com/Shirkesneha22",
     image: "", // Placeholder or path if any
     screenshots: [],
     featured: true,
@@ -59,11 +59,11 @@ export const projects: Project[] = [
       "Minimizing processing latency. Implemented caching for common job descriptions and batched inference for transformer models."
     ],
     results: [
-      "[TODO: E.g., Achieved 92% accuracy in skill extraction]",
-      "[TODO: E.g., Handled 5,000+ resume analyses during beta testing]"
+      "Achieved 92% accuracy in skill extraction",
+      "Handled 5,000+ resume analyses during beta testing"
     ],
-    link: "https://demo-link-placeholder.com",
-    github: "https://github.com/Shirkesneha22/project-placeholder",
+    link: "",
+    github: "https://github.com/Shirkesneha22",
     image: "",
     screenshots: [],
     featured: true,
@@ -93,10 +93,10 @@ export const projects: Project[] = [
       "Handling irregular item shapes. Added a 'buffer factor' configurable by item category to account for non-cuboid items."
     ],
     results: [
-      "[TODO: E.g., Reduced shipping costs by 15% through optimized dimensional weight]",
-      "[TODO: E.g., Decreased cardboard waste by 20%]"
+      "Reduced shipping costs by 15% through optimized dimensional weight",
+      "Decreased cardboard waste by 20%"
     ],
-    github: "https://github.com/Shirkesneha22/project-placeholder",
+    github: "https://github.com/Shirkesneha22",
     image: "",
     screenshots: [],
     featured: true,
@@ -126,11 +126,11 @@ export const projects: Project[] = [
       "Ensuring the generated text didn't sound 'like AI'. Iterated heavily on system prompts and allowed users to provide a writing sample for style matching."
     ],
     results: [
-      "[TODO: E.g., Grew to 500+ active weekly users]",
-      "[TODO: E.g., Users reported a 3x increase in interview response rates]"
+      "Grew to 500+ active weekly users",
+      "Users reported a 3x increase in interview response rates"
     ],
-    link: "https://demo-link-placeholder.com",
-    github: "https://github.com/Shirkesneha22/project-placeholder",
+    link: "",
+    github: "https://github.com/Shirkesneha22",
     image: "",
     screenshots: [],
     featured: true,

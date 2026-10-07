@@ -89,7 +89,7 @@ export function Hero() {
               <div className="text-pink-400">def <span className="text-blue-400">__init__</span>(self):</div>
               <div className="pl-4 text-slate-300">
                 self.name = <span className="text-green-400">"Sneha Shirke"</span><br/>
-                self.role = <span className="text-green-400">"Full Stack Eng"</span><br/>
+                self.role = <span className="text-green-400">"Full Stack Developer"</span><br/>
                 self.tools = [<span className="text-green-400">"React"</span>, <span className="text-green-400">"Python"</span>, <span className="text-green-400">"AWS"</span>]<br/>
               </div>
               <br/>

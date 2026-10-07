@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Sneha Balu Shirke",
   headline: "Full Stack Developer | Python · React · GenAI",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://snehashirke.com", // [TODO: final domain]
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://snehashirke.com", 
   location: "Pune, India",
   email: "snehashirke221@gmail.com",
   github: "https://github.com/Shirkesneha22",
@@ -16,6 +16,6 @@ export const siteConfig = {
   analytics: {
     // Set to true to enable Plausible Analytics
     enabled: true,
-    domain: "snehashirke.com", // [TODO: final domain]
+    domain: "snehashirke.com", 
   },
 };
