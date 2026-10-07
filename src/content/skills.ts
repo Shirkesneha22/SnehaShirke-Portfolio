@@ -1,27 +1,32 @@
-export type SkillCategory = {
-  category: string;
-  items: string[];
-};
+import { SkillGroup } from "@/types";
 
-export const skills: SkillCategory[] = [
+export const skills: SkillGroup[] = [
   {
-    category: "Languages",
-    items: ["Python", "TypeScript", "JavaScript"],
+    name: "Languages",
+    skills: ["JavaScript", "TypeScript", "Python", "Java"]
   },
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "Tailwind CSS"],
+    name: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3"]
   },
   {
-    category: "Backend",
-    items: ["FastAPI", "Django", "Node.js"],
+    name: "Backend & APIs",
+    skills: ["Node.js", "Express", "REST", "GraphQL", "AWS Lambda"]
   },
   {
-    category: "Database & Cloud",
-    items: ["PostgreSQL", "MongoDB", "DynamoDB", "AWS (Lambda, S3, CloudFront)"],
+    name: "Databases",
+    skills: ["MongoDB", "PostgreSQL", "DynamoDB", "MySQL"]
   },
   {
-    category: "Specialized",
-    items: ["GenAI", "RAG", "NLP"],
+    name: "AI/GenAI",
+    skills: ["OpenAI API", "LangChain", "Prompt Engineering"]
   },
+  {
+    name: "Cloud & DevOps",
+    skills: ["AWS", "Docker", "CI/CD", "Vercel", "Netlify"]
+  },
+  {
+    name: "Practices",
+    skills: ["Agile/Scrum", "TDD", "Clean Code", "System Design"]
+  }
 ];

@@ -1,9 +1,10 @@
-import { siteConfig } from "@/content/config";
+import { siteConfig } from "@/content/site";
 import { experiences } from "@/content/experience";
 import { projects } from "@/content/projects";
 import { skills } from "@/content/skills";
 import { Mail, ExternalLink } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+
 export default function Home() {
   return (
     <div className="space-y-24">
@@ -27,7 +28,7 @@ export default function Home() {
             <Mail className="w-6 h-6" />
           </a>
           <a
-            href={siteConfig.github}
+            href={siteConfig.socials.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-500 hover:text-slate-900 transition-colors"
@@ -36,7 +37,7 @@ export default function Home() {
             <GithubIcon className="w-6 h-6" />
           </a>
           <a
-            href={siteConfig.linkedin}
+            href={siteConfig.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-500 hover:text-blue-700 transition-colors"
@@ -51,8 +52,8 @@ export default function Home() {
       <section className="space-y-8">
         <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Experience</h2>
         <div className="space-y-12">
-          {experiences.map((exp) => (
-            <div key={exp.id} className="relative">
+          {experiences.map((exp, index) => (
+            <div key={index} className="relative">
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-4">
                 <h3 className="text-lg font-semibold text-slate-900">
                   {exp.role}
@@ -80,9 +81,9 @@ export default function Home() {
       <section className="space-y-8">
         <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <div
-              key={project.id}
+              key={index}
               className="group border border-slate-200 rounded-2xl p-6 hover:border-slate-300 transition-all hover:shadow-sm flex flex-col h-full bg-white"
             >
               <div className="flex justify-between items-start gap-4 mb-4">
@@ -90,9 +91,9 @@ export default function Home() {
                   {project.title}
                 </h3>
                 <div className="flex gap-3 text-slate-400">
-                  {project.githubUrl && (
+                  {project.github && (
                     <a
-                      href={project.githubUrl}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-slate-900 transition-colors"
@@ -101,9 +102,9 @@ export default function Home() {
                       <GithubIcon className="w-5 h-5" />
                     </a>
                   )}
-                  {project.liveUrl && (
+                  {project.link && (
                     <a
-                      href={project.liveUrl}
+                      href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-blue-600 transition-colors"
@@ -136,13 +137,13 @@ export default function Home() {
       <section className="space-y-8">
         <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skillGroup) => (
-            <div key={skillGroup.category} className="space-y-3">
+          {skills.map((skillGroup, index) => (
+            <div key={index} className="space-y-3">
               <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
-                {skillGroup.category}
+                {skillGroup.name}
               </h3>
               <ul className="space-y-2">
-                {skillGroup.items.map((item) => (
+                {skillGroup.skills.map((item) => (
                   <li key={item} className="text-slate-600">
                     {item}
                   </li>
@@ -155,3 +156,4 @@ export default function Home() {
     </div>
   );
 }
+
