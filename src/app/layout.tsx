@@ -105,6 +105,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {siteConfig.analytics.enabled && (
+          <script
+            defer
+            data-domain={siteConfig.analytics.domain}
+            src="https://plausible.io/js/script.js"
+          ></script>
+        )}
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
           <Header />
           <main id="main-content" className="flex-grow pt-20">

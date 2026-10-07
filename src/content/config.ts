@@ -13,4 +13,9 @@ export const siteConfig = {
     institution: "SPPU",
     graduationYear: 2025,
   },
+  analytics: {
+    // Set to true to enable Plausible Analytics
+    enabled: true,
+    domain: "snehashirke.com", // [TODO: final domain]
+  },
 };
