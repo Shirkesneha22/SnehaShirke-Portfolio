@@ -2,8 +2,8 @@ import { siteConfig } from "@/content/config";
 import { experiences } from "@/content/experience";
 import { projects } from "@/content/projects";
 import { skills } from "@/content/skills";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
-
+import { Mail, ExternalLink } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 export default function Home() {
   return (
     <div className="space-y-24">
@@ -33,7 +33,7 @@ export default function Home() {
             className="text-slate-500 hover:text-slate-900 transition-colors"
             aria-label="GitHub"
           >
-            <Github className="w-6 h-6" />
+            <GithubIcon className="w-6 h-6" />
           </a>
           <a
             href={siteConfig.linkedin}
@@ -42,7 +42,7 @@ export default function Home() {
             className="text-slate-500 hover:text-blue-700 transition-colors"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-6 h-6" />
+            <LinkedinIcon className="w-6 h-6" />
           </a>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function Home() {
                       className="hover:text-slate-900 transition-colors"
                       aria-label={`${project.title} GitHub repo`}
                     >
-                      <Github className="w-5 h-5" />
+                      <GithubIcon className="w-5 h-5" />
                     </a>
                   )}
                   {project.liveUrl && (
