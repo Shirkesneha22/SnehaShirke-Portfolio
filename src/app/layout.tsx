@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/config";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - ${siteConfig.headline}`,
@@ -16,15 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} font-sans scroll-smooth`}>
-      <body className="bg-slate-50 text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 md:px-12 py-12 md:py-20 lg:py-32 flex flex-col min-h-screen">
-          <main className="flex-grow">{children}</main>
-          <footer className="mt-20 pt-8 border-t border-slate-200 text-sm text-slate-500">
-            © 2026 {siteConfig.name}. Built with Next.js & Tailwind.
-          </footer>
-        </div>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body className="antialiased min-h-screen flex flex-col selection:bg-[var(--accent)] selection:text-white">
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
+          <Header />
+          <main className="flex-grow pt-20">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
