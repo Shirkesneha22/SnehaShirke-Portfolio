@@ -35,10 +35,24 @@ export interface Experience {
   role: string;
   startDate: string;
   endDate: string;
+  location: string;
   description: string[];
+  technologies: string[];
 }
 
 export interface SkillGroup {
   name: string;
   skills: string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  year: string;
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  status: "Earned" | "In progress";
 }
