@@ -5,10 +5,11 @@ import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
 import { Education } from "@/components/sections/Education";
 import { Contact } from "@/components/sections/Contact";
+import { Container } from "@/components/ui/Container";
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <Container className="space-y-16 pb-16">
       <Hero />
       <About />
       <Experience />
@@ -16,7 +17,7 @@ export default function Home() {
       <Skills />
       <Education />
       <Contact />
-    </div>
+    </Container>
   );
 }
 
