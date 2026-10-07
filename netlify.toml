@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && find out -name '*$*' -exec rm -rf {} +"
   publish = "out"
 
 [[redirects]]
