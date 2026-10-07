@@ -1,9 +1,8 @@
 import { AnchorHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
 
 interface IconLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  icon: LucideIcon;
+  icon: React.ElementType;
 }
 
 export function IconLink({ href, icon: Icon, className, ...props }: IconLinkProps) {

@@ -1,6 +1,7 @@
 import { Container } from "../ui/Container";
 import { siteConfig } from "@/content/config";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "../ui/SocialIcons";
 import { IconLink } from "../ui/IconLink";
 
 export function Footer() {
@@ -14,14 +15,11 @@ export function Footer() {
             © {year} {siteConfig.name}. Built with Next.js & Tailwind.
           </p>
           <div className="flex items-center space-x-4">
-            {siteConfig.links.github && (
-              <IconLink href={siteConfig.links.github} icon={Github} aria-label="GitHub" />
+            {siteConfig.github && (
+              <IconLink href={siteConfig.github} icon={GithubIcon} aria-label="GitHub" />
             )}
-            {siteConfig.links.linkedin && (
-              <IconLink href={siteConfig.links.linkedin} icon={Linkedin} aria-label="LinkedIn" />
-            )}
-            {siteConfig.links.twitter && (
-              <IconLink href={siteConfig.links.twitter} icon={Twitter} aria-label="Twitter" />
+            {siteConfig.linkedin && (
+              <IconLink href={siteConfig.linkedin} icon={LinkedinIcon} aria-label="LinkedIn" />
             )}
             <IconLink href={`mailto:${siteConfig.email}`} icon={Mail} aria-label="Email" />
           </div>

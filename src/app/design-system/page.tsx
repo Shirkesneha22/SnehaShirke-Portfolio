@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionReveal } from "@/components/layout/SectionReveal";
 import { IconLink } from "@/components/ui/IconLink";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export default function DesignSystem() {
   return (
@@ -93,9 +93,9 @@ export default function DesignSystem() {
           <div className="space-y-4 pt-4">
             <p className="text-sm font-medium text-[var(--text-muted)]">Icon Links</p>
             <div className="flex gap-4">
-              <IconLink href="#" icon={Github} />
-              <IconLink href="#" icon={Twitter} />
-              <IconLink href="#" icon={Linkedin} />
+              <IconLink href="#" icon={GithubIcon} />
+              <IconLink href="#" icon={TwitterIcon} />
+              <IconLink href="#" icon={LinkedinIcon} />
             </div>
           </div>
         </div>
