@@ -94,71 +94,75 @@ export function Header() {
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
             )}
-            <Link
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium rounded-md bg-[var(--surface)] text-[var(--text-main)] border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
-            >
-              Resume
-            </Link>
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <div className="flex md:hidden items-center space-x-4">
-            {mounted && (
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-hover)] transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-            )}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-md text-[var(--text-main)] hover:bg-[var(--surface-hover)] transition-colors"
-              aria-label="Toggle mobile menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </Container>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div
-          ref={menuRef}
-          className="md:hidden fixed inset-0 top-16 sm:top-20 bg-[var(--background)] z-40 overflow-y-auto border-t border-[var(--border)]"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div className="flex flex-col px-6 py-8 space-y-6">
-            {navLinks.map((link) => (
               <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-2xl font-semibold text-[var(--text-main)] hover:text-[var(--accent)] transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="pt-6 border-t border-[var(--border)]">
-              <Link
-                href="/resume.pdf"
+                href="/Sneha_Shirke_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-md bg-[var(--surface)] text-[var(--text-main)] border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
+                download
+                className="px-4 py-2 text-sm font-medium rounded-md bg-[var(--surface)] text-[var(--text-main)] border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
+                aria-label="Download my resume as PDF"
               >
                 Resume
               </Link>
             </div>
+
+            {/* Mobile Menu Toggle */}
+            <div className="flex md:hidden items-center space-x-4">
+              {mounted && (
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-hover)] transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+                </button>
+              )}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 rounded-md text-[var(--text-main)] hover:bg-[var(--surface-hover)] transition-colors"
+                aria-label="Toggle mobile menu"
+                aria-expanded={isMobileMenuOpen}
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
-        </div>
-      )}
-    </header>
-  );
-}
+        </Container>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div
+            ref={menuRef}
+            className="md:hidden fixed inset-0 top-16 sm:top-20 bg-[var(--background)] z-40 overflow-y-auto border-t border-[var(--border)]"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div className="flex flex-col px-6 py-8 space-y-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-semibold text-[var(--text-main)] hover:text-[var(--accent)] transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="pt-6 border-t border-[var(--border)]">
+                <Link
+                  href="/Sneha_Shirke_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-md bg-[var(--surface)] text-[var(--text-main)] border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
+                  aria-label="Download my resume as PDF"
+                >
+                  Resume
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
+    );
+  }

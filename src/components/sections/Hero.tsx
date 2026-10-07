@@ -37,7 +37,9 @@ export function Hero() {
             href="/Sneha_Shirke_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            download
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+            aria-label="Download my resume as PDF"
           >
             Resume
             <Download className="w-4 h-4" />
