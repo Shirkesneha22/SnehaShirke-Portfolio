@@ -1,3 +1,0 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import '../styles/footer.css';
-export default function Footer() { return <footer className="footer"><div className="footer-container"><a href="#hero" className="footer-logo">Sneha Shirke<span>.</span></a><div className="footer-social"><a href="https://www.linkedin.com/in/sneha-shirke/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><FaLinkedin/></a><a href="https://github.com/Shirkesneha22" aria-label="GitHub" target="_blank" rel="noreferrer"><FaGithub/></a><a href="mailto:snehashirke221@gmail.com" aria-label="Email"><FaEnvelope/></a></div><p className="footer-copyright">Designed & Developed by Sneha Shirke © 2026</p></div></footer>; }
