@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "Sneha Balu Shirke",
   headline: "Full Stack Developer | Python · React · GenAI",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://snehashirke.com", // [TODO: final domain]
   location: "Pune, India",
   email: "snehashirke221@gmail.com",
   github: "https://github.com/Shirkesneha22",
