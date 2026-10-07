@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 
 export const viewport: Viewport = {
   themeColor: [
@@ -85,7 +85,10 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="antialiased min-h-screen flex flex-col selection:bg-[var(--accent)] selection:text-white">
+      <body className="antialiased min-h-screen flex flex-col selection:bg-[var(--accent)] selection:text-white overflow-x-hidden">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+          Skip to content
+        </a>
         <noscript>
           <div style={{ padding: '20px', background: '#fff', color: '#000', textAlign: 'center' }}>
             <h1>{siteConfig.name} - {siteConfig.headline}</h1>
@@ -104,7 +107,7 @@ export default function RootLayout({
         />
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
           <Header />
-          <main className="flex-grow pt-20">
+          <main id="main-content" className="flex-grow pt-20">
             {children}
           </main>
           <Footer />

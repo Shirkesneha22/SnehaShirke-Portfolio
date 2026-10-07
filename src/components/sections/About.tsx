@@ -16,7 +16,7 @@ export function About() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-slate-200 dark:border-slate-800">
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 dark:text-slate-400">
                 <MapPin className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Location</span>
               </div>
@@ -24,7 +24,7 @@ export function About() {
             </div>
             
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 dark:text-slate-400">
                 <GraduationCap className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Education</span>
               </div>
@@ -32,7 +32,7 @@ export function About() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 dark:text-slate-400">
                 <Briefcase className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Experience</span>
               </div>
@@ -40,7 +40,7 @@ export function About() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 dark:text-slate-400">
                 <Code className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Focus</span>
               </div>

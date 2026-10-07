@@ -23,7 +23,7 @@ export function Experience() {
                   {exp.company}
                 </div>
               </div>
-              <div className="flex flex-col items-start md:items-end gap-1 text-sm text-slate-500 dark:text-slate-400 mt-1">
+              <div className="flex flex-col items-start md:items-end gap-1 text-sm text-slate-600 dark:text-slate-400 dark:text-slate-400 mt-1">
                 <div className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4" />
                   <span>{exp.startDate} – {exp.endDate}</span>

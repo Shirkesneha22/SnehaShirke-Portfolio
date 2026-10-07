@@ -8,7 +8,7 @@ export function Hero() {
       <div className="flex-1 space-y-6">
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-            <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse motion-reduce:animate-none"></span>
             <span className="text-xs font-medium text-green-600 dark:text-green-500 bg-green-50 dark:bg-green-500/10 px-2 py-1 rounded-full">
               {siteConfig.statusBadge}
             </span>
@@ -51,7 +51,7 @@ export function Hero() {
             href={siteConfig.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
+            className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
             aria-label="GitHub"
           >
             <GithubIcon className="w-6 h-6" />
@@ -60,14 +60,14 @@ export function Hero() {
             href={siteConfig.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             aria-label="LinkedIn"
           >
             <LinkedinIcon className="w-6 h-6" />
           </a>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="text-slate-500 hover:text-red-500 transition-colors"
+            className="text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors"
             aria-label="Email"
           >
             <Mail className="w-6 h-6" />

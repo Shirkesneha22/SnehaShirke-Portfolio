@@ -34,7 +34,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
 
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <Link href="/#projects" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors mb-12">
+      <Link href="/#projects" className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors mb-12">
         <ArrowLeft className="w-4 h-4" />
         Back to Home
       </Link>
@@ -189,7 +189,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
       </div>
 
       <div className="pt-12 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
-        <div className="text-sm text-slate-500">
+        <div className="text-sm text-slate-600 dark:text-slate-400">
           Next Project
         </div>
         <Link 

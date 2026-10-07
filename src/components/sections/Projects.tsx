@@ -2,6 +2,7 @@ import { projects } from "@/content/projects";
 import { ExternalLink, ArrowRight, Folder } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Projects() {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 4);
@@ -19,9 +20,9 @@ export function Projects() {
             className="group relative flex flex-col md:flex-row gap-6 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-300 dark:hover:border-slate-700 transition-colors"
           >
             <div className="md:w-1/3 flex-shrink-0">
-              <div className="w-full aspect-video bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden flex items-center justify-center border border-slate-200 dark:border-slate-700">
+              <div className="w-full aspect-video bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden flex items-center justify-center border border-slate-200 dark:border-slate-700 relative">
                 {project.image ? (
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  <Image src={project.image} alt={project.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 ) : (
                   <Folder className="w-12 h-12 text-slate-400 dark:text-slate-600" />
                 )}
@@ -54,7 +55,7 @@ export function Projects() {
                   </span>
                 ))}
                 {project.technologies.length > 5 && (
-                  <span className="px-3 py-1 text-slate-500 text-xs font-semibold">
+                  <span className="px-3 py-1 text-slate-600 dark:text-slate-400 text-xs font-semibold">
                     +{project.technologies.length - 5} more
                   </span>
                 )}
@@ -86,7 +87,7 @@ export function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors p-2"
+                    className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors p-2"
                     aria-label={`${project.title} GitHub repo`}
                   >
                     <GithubIcon className="w-5 h-5" />

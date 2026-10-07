@@ -22,7 +22,7 @@ export function Education() {
                 <p className="text-slate-700 dark:text-slate-300 font-medium mb-1 relative z-10">
                   {edu.institution}
                 </p>
-                <p className="text-sm text-slate-500 dark:text-slate-400 relative z-10">
+                <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-slate-400 relative z-10">
                   Class of {edu.year}
                 </p>
               </div>
@@ -47,7 +47,7 @@ export function Education() {
                   <h3 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
                     {cert.name}
                   </h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">
+                  <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-slate-400">
                     {cert.issuer}
                   </p>
                 </div>
