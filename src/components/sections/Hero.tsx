@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/content/site";
 import { Mail, ArrowDown, FileText, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
@@ -75,35 +76,15 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-full md:w-[320px] lg:w-[400px] flex-shrink-0">
-        <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-[#0A0A0A] shadow-xl">
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-800 bg-[#111]">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <span className="ml-2 text-xs text-slate-400 font-mono">sneha.py</span>
-          </div>
-          <div className="p-4 sm:p-5 font-mono text-sm">
-            <div className="text-pink-400">class <span className="text-blue-400">Developer</span>:</div>
-            <div className="pl-4 text-slate-300">
-              <div className="text-pink-400">def <span className="text-blue-400">__init__</span>(self):</div>
-              <div className="pl-4 text-slate-300">
-                self.name = <span className="text-green-400">"Sneha Shirke"</span><br/>
-                self.role = <span className="text-green-400">"Full Stack Developer"</span><br/>
-                self.tools = [<span className="text-green-400">"React"</span>, <span className="text-green-400">"Python"</span>, <span className="text-green-400">"AWS"</span>]<br/>
-              </div>
-              <br/>
-              <div className="text-pink-400">def <span className="text-blue-400">build</span>(self):</div>
-              <div className="pl-4 text-slate-400 italic"># Ship cool things</div>
-              <div className="pl-4 text-orange-300">return <span className="text-green-400">"🚀"</span></div>
-            </div>
-            <div className="mt-4 flex items-center text-slate-400">
-              <span className="text-green-500 mr-2">~</span> $ python sneha.py
-            </div>
-            <div className="mt-1 text-slate-300">
-              🚀 Ready to build
-            </div>
-          </div>
+      <div className="w-full md:w-[320px] lg:w-[400px] flex-shrink-0 flex justify-center">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-xl">
+          <Image
+            src="/profile.jpg"
+            alt="Sneha Shirke"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
