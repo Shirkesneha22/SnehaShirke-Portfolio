@@ -112,7 +112,7 @@ export default function RootLayout({
             src="https://plausible.io/js/script.js"
           ></script>
         )}
-        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
           <Header />
           <main id="main-content" className="flex-grow pt-20">
             {children}

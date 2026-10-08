@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Container } from "../ui/Container";
 
 const navLinks = [
@@ -16,11 +15,10 @@ const navLinks = [
 
 export function Header() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Avoid hydration mismatch by only rendering theme toggle after mount
+  // Avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -57,10 +55,6 @@ export function Header() {
     }
   }, [isMobileMenuOpen]);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
   return (
     <header className="fixed top-0 w-full z-50 bg-[var(--background)]/80 backdrop-blur-md border-b border-[var(--border)] transition-colors duration-300">
       <Container>
@@ -85,15 +79,6 @@ export function Header() {
 
           {/* Desktop Right Side */}
           <div className="hidden md:flex items-center space-x-4">
-            {mounted && (
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-hover)] transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-            )}
               <Link
                 href="/Sneha_Shirke_Resume.pdf"
                 target="_blank"
@@ -108,15 +93,6 @@ export function Header() {
 
             {/* Mobile Menu Toggle */}
             <div className="flex md:hidden items-center space-x-4">
-              {mounted && (
-                <button
-                  onClick={toggleTheme}
-                  className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-hover)] transition-colors"
-                  aria-label="Toggle theme"
-                >
-                  {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
-              )}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2 rounded-md text-[var(--text-main)] hover:bg-[var(--surface-hover)] transition-colors"
