@@ -49,6 +49,7 @@ export interface Education {
   degree: string;
   institution: string;
   year: string;
+  score?: string;
 }
 
 export interface Certification {

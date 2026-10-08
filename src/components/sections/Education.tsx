@@ -22,8 +22,9 @@ export function Education() {
                 <p className="text-slate-700 dark:text-slate-300 font-medium mb-1 relative z-10">
                   {edu.institution}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-slate-400 relative z-10">
-                  Class of {edu.year}
+                <p className="text-sm text-slate-600 dark:text-slate-400 relative z-10">
+                  {edu.year}
+                  {edu.score && <span className="ml-2 px-2 py-0.5 bg-slate-200 dark:bg-slate-800 rounded-md text-xs font-semibold">{edu.score}</span>}
                 </p>
               </div>
             ))}

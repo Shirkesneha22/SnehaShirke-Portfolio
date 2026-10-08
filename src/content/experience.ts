@@ -2,10 +2,10 @@ import { Experience } from "@/types";
 
 export const experiences: Experience[] = [
   {
-    company: "Vedant Infoedge",
+    company: "Professional Experience",
     role: "Full Stack Developer",
-    startDate: "2023",
-    endDate: "Present",
+    startDate: "Nov 2025",
+    endDate: "March 2026",
     location: "Pune, India",
     description: [
       "Built reusable React components and added lazy loading/memoization, reducing page load time by 40%.",
