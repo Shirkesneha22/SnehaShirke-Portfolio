@@ -76,13 +76,13 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-full md:w-[320px] lg:w-[400px] flex-shrink-0 flex justify-center">
-        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-xl">
+      <div className="w-full md:w-[320px] lg:w-[400px] flex-shrink-0 flex justify-center pt-6 md:pt-0">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-xl bg-slate-900">
           <Image
             src="/profile.jpg"
             alt="Sneha Shirke"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
         </div>
